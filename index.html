@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giorgi Tsertsvadze — Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- CANVAS BACKGROUND -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <div class="nav-logo">
+        <span class="bracket">[</span>GT<span class="bracket">]</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#about"><span class="nav-num">01.</span>About</a>
+        </li>
+        <li>
+          <a href="#experience"><span class="nav-num">02.</span>Experience</a>
+        </li>
+        <li>
+          <a href="#skills"><span class="nav-num">03.</span>Skills</a>
+        </li>
+        <li>
+          <a href="#projects"><span class="nav-num">04.</span>Projects</a>
+        </li>
+        <li>
+          <a href="#education"><span class="nav-num">05.</span>Education</a>
+        </li>
+        <li>
+          <a href="#contact"><span class="nav-num">06.</span>Contact</a>
+        </li>
+      </ul>
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span>AVAILABLE FOR HIRE</span>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-grid-overlay"></div>
+      <div class="hero-scanline"></div>
+      <div class="hero-content">
+        <div class="hero-tag">// INITIALIZING PROFILE...</div>
+        <div class="hero-glitch-wrap">
+          <h1 class="hero-name" data-text="GIORGI TSERTSVADZE">
+            GIORGI TSERTSVADZE
+          </h1>
+        </div>
+        <div class="hero-titles">
+          <span class="title-prefix">&gt;&nbsp;</span>
+          <span class="typed-text" id="typed"></span>
+          <span class="cursor-blink">_</span>
+        </div>
+        <p class="hero-sub">
+          Final-year Software Engineering student at
+          <span class="accent">Vilnius University</span>.<br />
+          Building data systems, web experiences &amp; scalable solutions.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <span class="btn-border"></span>
+            VIEW PROJECTS
+          </a>
+          <a href="#contact" class="btn-secondary">CONTACT ME</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="6">0</span>
+            <span class="stat-label">Projects Shipped</span>
+          </div>
+          <div class="stat-divider">/</div>
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-divider">/</div>
+          <div class="stat">
+            <span class="stat-num" data-count="2">0</span>
+            <span class="stat-label">Years Freelancing</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="photo-ring ring-1"></div>
+        <div class="photo-ring ring-2"></div>
+        <div class="photo-ring ring-3"></div>
+        <div class="photo-circle">
+          <img
+            src="photo.webp"
+            alt="Giorgi Tsertsvadze"
+            class="photo-webp"
+            id="profile-photo"
+          />
+          <div class="photo-overlay"></div>
+          <div class="photo-scan"></div>
+        </div>
+        <div class="photo-corner tl"></div>
+        <div class="photo-corner tr"></div>
+        <div class="photo-corner bl"></div>
+        <div class="photo-corner br"></div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <h2 class="section-title">ABOUT_ME<span class="blink">;</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-intro">
+              I'm a <span class="accent">21-year-old</span> Software Engineering
+              student originally from <span class="accent">Georgia 🇬🇪</span>,
+              currently based in
+              <span class="accent">Vilnius, Lithuania 🇱🇹</span> — actively
+              pivoting toward data engineering, database management, and
+              analytics.
+            </p>
+            <p>
+              My journey started at <span class="accent">Skytel</span> —
+              Georgia's national internet &amp; TV provider — where I
+              volunteered at my father's company and got hands-on with real SQL
+              and database systems from day one. That experience lit the spark.
+            </p>
+            <p>
+              Today I run a <span class="accent">freelance web business</span>,
+              building premium websites for local businesses in Tbilisi — cafes,
+              restaurants, hospitality brands — while completing my degree and
+              leveling up in data engineering through EPAM and certifications.
+            </p>
+            <div class="about-langs">
+              <span class="lang-tag">🇬🇪 Georgian</span>
+              <span class="lang-tag">🇬🇧 English</span>
+              <span class="lang-tag">🇷🇺 Russian</span>
+            </div>
+          </div>
+          <div class="about-terminal">
+            <div class="terminal-bar">
+              <span class="t-dot red"></span>
+              <span class="t-dot yellow"></span>
+              <span class="t-dot green"></span>
+              <span class="t-title">giorgi@portfolio:~</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <div class="t-line">
+                <span class="t-prompt">$</span>
+                <span class="t-cmd">whoami</span>
+              </div>
+              <div class="t-line t-out">giorgi_tsertsvadze</div>
+              <div class="t-line">
+                <span class="t-prompt">$</span>
+                <span class="t-cmd">cat profile.json</span>
+              </div>
+              <div class="t-line t-out">{</div>
+              <div class="t-line t-out">&nbsp;&nbsp;"age": 21,</div>
+              <div class="t-line t-out">
+                &nbsp;&nbsp;"location": "Vilnius, LT / Tbilisi, GE",
+              </div>
+              <div class="t-line t-out">
+                &nbsp;&nbsp;"university": "Vilnius University",
+              </div>
+              <div class="t-line t-out">
+                &nbsp;&nbsp;"faculty": "eServices / eCommerce",
+              </div>
+              <div class="t-line t-out">
+                &nbsp;&nbsp;"focus": "Data Engineering",
+              </div>
+              <div class="t-line t-out">&nbsp;&nbsp;"freelance": true,</div>
+              <div class="t-line t-out">&nbsp;&nbsp;"dog": "Poodle 🐩"</div>
+              <div class="t-line t-out">}</div>
+              <div class="t-line">
+                <span class="t-prompt">$</span>
+                <span class="t-cursor-block">&nbsp;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2 class="section-title">EXPERIENCE<span class="blink">;</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-card">
+              <div class="tc-header">
+                <div>
+                  <h3 class="tc-role">Freelance Web Developer</h3>
+                  <span class="tc-company"
+                    >Self-Employed · Tbilisi, Georgia</span
+                  >
+                </div>
+                <span class="tc-date">2023 — Present</span>
+              </div>
+              <p class="tc-desc">
+                Building premium single-page websites for Tbilisi businesses —
+                restaurants, cafes, hospitality brands. Full stack from design
+                to deployment via GitHub &amp; Netlify.
+              </p>
+              <div class="tc-tags">
+                <span>HTML/CSS/JS</span><span>GitHub</span><span>Netlify</span
+                ><span>Client Relations</span>
+              </div>
+              <div class="tc-clients">
+                <span class="client-tag">Los Amigos</span>
+                <span class="client-tag">Lulu Restaurant</span>
+                <span class="client-tag">Chicos Tbilisi</span>
+                <span class="client-tag">Monday Greens</span>
+                <span class="client-tag">MAIZEN Matcha</span>
+                <span class="client-tag">Zodiaqo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-card">
+              <div class="tc-header">
+                <div>
+                  <h3 class="tc-role">Database Volunteer</h3>
+                  <span class="tc-company">Skytel · Tbilisi, Georgia</span>
+                </div>
+                <span class="tc-date">2022 — 2023</span>
+              </div>
+              <p class="tc-desc">
+                Gained hands-on SQL and database management experience at
+                Georgia's national internet &amp; TV provider. Worked with real
+                production data systems — the origin of my data engineering
+                passion.
+              </p>
+              <div class="tc-tags">
+                <span>SQL</span><span>Database Management</span
+                ><span>Data Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="tc-header">
+                <div>
+                  <h3 class="tc-role">Data Software Engineering Student</h3>
+                  <span class="tc-company">EPAM Systems · Remote</span>
+                </div>
+                <span class="tc-date">2024 — Present</span>
+              </div>
+              <p class="tc-desc">
+                Enrolled in EPAM's data software engineering course, deepening
+                expertise in data pipelines, architecture, and engineering best
+                practices.
+              </p>
+              <div class="tc-tags">
+                <span>Data Engineering</span><span>Pipelines</span
+                ><span>Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2 class="section-title">
+            SKILLS_MATRIX<span class="blink">;</span>
+          </h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category" data-reveal>
+            <div class="skill-cat-header">
+              <span class="skill-icon">⬡</span>
+              <h3>Data & Databases</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>PostgreSQL</span><span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>MySQL</span><span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>SQL</span><span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Data Modeling</span><span class="skill-pct">78%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="78"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-reveal>
+            <div class="skill-cat-header">
+              <span class="skill-icon">⬡</span>
+              <h3>Web Development</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>HTML/CSS</span><span class="skill-pct">92%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="92"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>JavaScript</span><span class="skill-pct">80%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Node.js</span><span class="skill-pct">70%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="70"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Responsive Design</span
+                  ><span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="88"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-reveal>
+            <div class="skill-cat-header">
+              <span class="skill-icon">⬡</span>
+              <h3>Tools & DevOps</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Git / GitHub</span><span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Netlify</span><span class="skill-pct">82%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="82"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>VS Code</span><span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>macOS / Bash</span><span class="skill-pct">75%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-reveal>
+            <div class="skill-cat-header">
+              <span class="skill-icon">⬡</span>
+              <h3>Languages & Other</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Python</span><span class="skill-pct">72%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="72"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Computer Vision (ML)</span
+                  ><span class="skill-pct">60%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="60"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>REST APIs</span><span class="skill-pct">75%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="75"></div>
+                </div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-label">
+                  <span>Agile / Scrum</span><span class="skill-pct">68%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="68"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2 class="section-title">PROJECTS<span class="blink">;</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card featured" data-reveal>
+            <div class="pc-glow"></div>
+            <div class="pc-tag">FEATURED</div>
+            <div class="pc-number">01</div>
+            <h3 class="pc-title">Hotel Deal Monitor</h3>
+            <p class="pc-desc">
+              Real-time hotel deal monitoring system built in Node.js.
+              Single-process architecture with flat JSON file storage. Designed
+              for E-Service Systems Design course and successfully defended.
+            </p>
+            <div class="pc-tech">
+              <span>Node.js</span><span>JSON</span><span>REST API</span
+              ><span>E-Services</span>
+            </div>
+            <div class="pc-links">
+              <span class="pc-status">Academic Project</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal>
+            <div class="pc-glow"></div>
+            <div class="pc-number">02</div>
+            <h3 class="pc-title">Freelance Client Pipeline DB</h3>
+            <p class="pc-desc">
+              MySQL database system to track freelance client statuses, project
+              pipelines, and ENUM-based workflow management for a Tbilisi web
+              agency.
+            </p>
+            <div class="pc-tech">
+              <span>MySQL</span><span>SQL</span><span>Database Design</span>
+            </div>
+            <div class="pc-links">
+              <span class="pc-status">Live / Internal Tool</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal>
+            <div class="pc-glow"></div>
+            <div class="pc-number">03</div>
+            <h3 class="pc-title">ImageNet Lemon Classifier</h3>
+            <p class="pc-desc">
+              Computer vision lab — applied pre-trained ImageNet models
+              (ResNet-18, ResNet-50, EfficientNet-B0) to lemon image
+              classification. Full end-to-end ML pipeline with Word report.
+            </p>
+            <div class="pc-tech">
+              <span>Python</span><span>ResNet</span><span>EfficientNet</span
+              ><span>PyTorch</span>
+            </div>
+            <div class="pc-links">
+              <span class="pc-status">Academic Lab</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal>
+            <div class="pc-glow"></div>
+            <div class="pc-number">04</div>
+            <h3 class="pc-title">Los Amigos — Restaurant Website</h3>
+            <p class="pc-desc">
+              Premium single-page website for Tbilisi Mexican restaurant. Custom
+              animations, brand-matched color palette, mobile-first responsive
+              design. Deployed on Netlify.
+            </p>
+            <div class="pc-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span
+              ><span>Netlify</span>
+            </div>
+            <div class="pc-links">
+              <span class="pc-status live">Live</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal>
+            <div class="pc-glow"></div>
+            <div class="pc-number">05</div>
+            <h3 class="pc-title">MAIZEN Matcha Bar Website</h3>
+            <p class="pc-desc">
+              Minimalist, premium SPA for a Tbilisi matcha bar. Clean aesthetic
+              with scroll animations, IntersectionObserver-powered reveals, and
+              a refined Japanese-inspired palette.
+            </p>
+            <div class="pc-tech">
+              <span>HTML</span><span>CSS</span><span>JS</span
+              ><span>GitHub Pages</span>
+            </div>
+            <div class="pc-links">
+              <span class="pc-status live">Live</span>
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal>
+            <div class="pc-glow"></div>
+            <div class="pc-number">06</div>
+            <h3 class="pc-title">freeCodeCamp Relational DB Projects</h3>
+            <p class="pc-desc">
+              Completed all 5 PostgreSQL/bash certification projects including
+              the final exam. Covered Celestial Bodies DB, World Cup DB, Salon
+              Appointment Scheduler, Periodic Table, and Number Guessing Game.
+            </p>
+            <div class="pc-tech">
+              <span>PostgreSQL</span><span>Bash</span><span>Linux</span>
+            </div>
+            <div class="pc-links">
+              <span class="pc-status cert">Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <h2 class="section-title">EDUCATION<span class="blink">;</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="edu-grid">
+          <div class="edu-card" data-reveal>
+            <div class="edu-year">2022 — 2026</div>
+            <div class="edu-icon">🎓</div>
+            <h3 class="edu-degree">BSc Software Engineering</h3>
+            <span class="edu-school">Vilnius University</span>
+            <span class="edu-location">Vilnius, Lithuania</span>
+            <p class="edu-detail">
+              Faculty of eServices / eCommerce. Final year. Focus on data
+              engineering, system design, and full-stack development.
+            </p>
+            <div class="edu-badge">Final Year</div>
+          </div>
+
+          <div class="edu-card" data-reveal>
+            <div class="edu-year">2024</div>
+            <div class="edu-icon">🏅</div>
+            <h3 class="edu-degree">Database Engineer Certification</h3>
+            <span class="edu-school">MicroOne</span>
+            <span class="edu-location">Online</span>
+            <p class="edu-detail">
+              Professional certification in database engineering covering
+              design, optimization, and management of relational database
+              systems.
+            </p>
+            <div class="edu-badge certified">Certified</div>
+          </div>
+
+          <div class="edu-card" data-reveal>
+            <div class="edu-year">2024</div>
+            <div class="edu-icon">📜</div>
+            <h3 class="edu-degree">Relational Database Certification</h3>
+            <span class="edu-school">freeCodeCamp</span>
+            <span class="edu-location">Online</span>
+            <p class="edu-detail">
+              Completed all 5 PostgreSQL/bash projects — Celestial Bodies DB,
+              World Cup DB, Salon Scheduler, Periodic Table &amp; Number
+              Guessing Game.
+            </p>
+            <div class="edu-badge certified">Certified</div>
+          </div>
+
+          <div class="edu-card" data-reveal>
+            <div class="edu-year">2024 — Present</div>
+            <div class="edu-icon">🔬</div>
+            <h3 class="edu-degree">Data Software Engineering Course</h3>
+            <span class="edu-school">EPAM Systems</span>
+            <span class="edu-location">Remote</span>
+            <p class="edu-detail">
+              Industry-grade data engineering curriculum covering pipelines,
+              cloud systems, and real-world data architecture.
+            </p>
+            <div class="edu-badge active">In Progress</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">06</span>
+          <h2 class="section-title">CONTACT<span class="blink">;</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="contact-wrap">
+          <div class="contact-left" data-reveal>
+            <p class="contact-headline">
+              Let's build something <span class="accent">great</span> together.
+            </p>
+            <p class="contact-sub">
+              Open to data engineering roles, freelance projects,
+              collaborations, and master's program connections across Europe.
+            </p>
+            <div class="contact-links">
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=tsertsvadzegio56@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <span class="cl-icon">✉</span>
+                <span>tsertsvadzegio56@gmail.com</span>
+                <span class="cl-arrow">→</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/george-tsertsvadze-9334b8350/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <span class="cl-icon">in</span>
+                <span>LinkedIn — George Tsertsvadze</span>
+                <span class="cl-arrow">→</span>
+              </a>
+              <a
+                href="https://github.com/Cercva1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <span class="cl-icon">⌥</span>
+                <span>GitHub — Cercva1</span>
+                <span class="cl-arrow">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-right" data-reveal>
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label>NAME</label>
+                <input
+                  type="text"
+                  id="form-name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>EMAIL</label>
+                <input
+                  type="email"
+                  id="form-email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>MESSAGE</label>
+                <textarea
+                  id="form-message"
+                  placeholder="Tell me about your project or opportunity..."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary full-width">
+                <span class="btn-border"></span>
+                SEND MESSAGE
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-logo"
+          ><span class="bracket">[</span>GT<span class="bracket">]</span></span
+        >
+        <span class="footer-copy"
+          >© 2025 Giorgi Tsertsvadze · Built with precision</span
+        >
+        <span class="footer-code">v1.0.0</span>
+      </div>
+    </footer>
+
+    <!-- EMAIL POPUP -->
+    <div id="email-popup" class="email-popup hidden">
+      <div class="popup-box">
+        <div class="popup-icon" id="popup-icon">✓</div>
+        <h3 class="popup-title" id="popup-title">MESSAGE SENT</h3>
+        <p class="popup-msg" id="popup-msg">
+          Your message has been delivered. I'll get back to you soon.
+        </p>
+        <button class="popup-close" id="popup-close">CLOSE</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
